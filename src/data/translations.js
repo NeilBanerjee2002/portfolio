@@ -23,25 +23,42 @@ const translations = {
 
         // Projects
         projectTitle: "Projects",
-        project1Title: "YelpCamp - Full Stack App",
-        project1Desc: "RESTful Node.js app with authentication, Cloudinary image uploads, and Mapbox integration",
-        project2Title: "Notes Management App",
-        project2Desc: "CRUD app with persistent storage and event-driven JavaScript patterns",
+
+        project1Title: "YelpCamp - Full Stack Platform",
+        project1Desc:
+            "Production-grade RESTful application with authentication, Cloudinary image uploads, and Mapbox integration",
+        project1Points: [
+            "Designed RESTful APIs with Express.js",
+            "Implemented authentication & authorization",
+            "Integrated Cloudinary for image storage",
+            "Structured MongoDB data models",
+        ],
+
+        project2Title: "Notes API System",
+        project2Desc:
+            "Backend-focused notes system with structured data handling, modular architecture, and scalable design",
+        project2Points: [
+            "Implemented full CRUD operations",
+            "Designed modular backend structure",
+            "Handled persistent data efficiently",
+        ],
 
         // Experience
         expTitle: "Experience",
         company: "Zimyo HRMS",
-        expDesc: "Building and maintaining REST APIs using Node.js, Express, and MongoDB",
+        expDesc:
+            "Building and maintaining REST APIs using Node.js, Express, and MongoDB",
 
         // Skills
         skillsTitle: "Backend Skills",
-        skills: "Node.js, Express.js, MongoDB, REST APIs, Authentication, MVC, Middleware",
+        skills:
+            "Node.js, Express.js, MongoDB, REST APIs, Authentication, MVC, Middleware",
 
         // Contact
         contactTitle: "Contact",
         email: "Email",
         github: "GitHub",
-        linkedin: "LinkedIn"
+        linkedin: "LinkedIn",
     },
 
     de: {
@@ -68,26 +85,43 @@ const translations = {
 
         // Projects
         projectTitle: "Projekte",
-        project1Title: "YelpCamp - Full-Stack App",
-        project1Desc: "RESTful Node.js App mit Authentifizierung, Cloudinary und Mapbox Integration",
-        project2Title: "Notizen App",
-        project2Desc: "CRUD Anwendung mit persistentem Speicher und eventbasierten JavaScript Mustern",
+
+        project1Title: "YelpCamp - Full-Stack Plattform",
+        project1Desc:
+            "Produktionsnahe RESTful Anwendung mit Authentifizierung, Cloudinary Bild-Uploads und Mapbox Integration",
+        project1Points: [
+            "RESTful APIs mit Express.js entwickelt",
+            "Authentifizierung & Autorisierung implementiert",
+            "Cloudinary für Bildspeicherung integriert",
+            "MongoDB Datenmodelle strukturiert",
+        ],
+
+        project2Title: "Notizen API System",
+        project2Desc:
+            "Backend-orientiertes Notizensystem mit strukturierter Datenverarbeitung und modularer Architektur",
+        project2Points: [
+            "Vollständige CRUD-Operationen implementiert",
+            "Modulare Backend-Struktur entworfen",
+            "Persistente Daten effizient verwaltet",
+        ],
 
         // Experience
         expTitle: "Erfahrung",
         company: "Zimyo HRMS",
-        expDesc: "Entwicklung und Wartung von REST APIs mit Node.js, Express und MongoDB",
+        expDesc:
+            "Entwicklung und Wartung von REST APIs mit Node.js, Express und MongoDB",
 
         // Skills
         skillsTitle: "Backend Fähigkeiten",
-        skills: "Node.js, Express.js, MongoDB, REST APIs, Authentifizierung, MVC, Middleware",
+        skills:
+            "Node.js, Express.js, MongoDB, REST APIs, Authentifizierung, MVC, Middleware",
 
         // Contact
         contactTitle: "Kontakt",
         email: "E-Mail",
         github: "GitHub",
-        linkedin: "LinkedIn"
-    }
+        linkedin: "LinkedIn",
+    },
 };
 
 export default translations;
