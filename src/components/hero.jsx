@@ -14,7 +14,7 @@ export default function Hero({ t }) {
                 transition={{ duration: 0.6 }}
             >
                 <p className="text-cyan-400 font-semibold mb-3">
-                    Node.js Backend Engineer
+                    {t.role}
                 </p>
 
                 <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight mb-6">
@@ -27,7 +27,7 @@ export default function Hero({ t }) {
 
                 <div className="flex gap-4 flex-wrap">
                     <a
-                        href="#projects"
+                        href="/projects"
                         className="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 transition font-semibold"
                     >
                         {t.btn1}
@@ -47,42 +47,44 @@ export default function Hero({ t }) {
                 initial={{ opacity: 0, x: 40 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-xl shadow-lg"
+                className="rounded-2xl overflow-hidden shadow-lg shadow-lg shadow-cyan-500/10"
             >
-                <motion.pre
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5 }}
-                ><pre className="text-sm text-green-400 overflow-x-auto">
-                        {`GET /campgrounds
-→ List all camps
 
-POST /campgrounds
-→ Create new campground
-(auth + images upload)
+                <div className="
+    rounded-2xl overflow-hidden
+    bg-slate-900 text-green-400
+    border border-slate-700
+    font-mono text-sm
+  ">
 
-GET /campgrounds/:id
-→ View campground details
-`}
-                    </pre></motion.pre>
+                    {/* Terminal Header */}
+                    <div className="flex items-center gap-2 px-4 py-2 bg-slate-800">
+                        <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+                        <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
+                        <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+                        <span className="ml-4 text-slate-400 text-xs">api-terminal</span>
+                    </div>
 
-                <motion.pre
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5 }}
-                ><pre className="text-sm text-cyan-400 mt-4 overflow-x-auto">
-                        {`PUT /campgrounds/:id
-→ Update campground
-(auth + author only)
+                    {/* Terminal Body */}
+                    <div className="p-4 space-y-2">
 
-DELETE /campgrounds/:id
-→ Delete campground
-(auth + author only)
+                        <p><span className="text-cyan-400">$</span> GET /campgrounds</p>
+                        <p className="text-slate-400">→ List all camps</p>
 
-GET /campgrounds/:id/edit
-→ Edit form (protected)
-`}
-                    </pre></motion.pre>
+                        <p><span className="text-cyan-400">$</span> POST /campgrounds</p>
+                        <p className="text-slate-400">→ Create new (auth + images)</p>
+
+                        <p><span className="text-cyan-400">$</span> GET /campgrounds/:id</p>
+                        <p className="text-slate-400">→ View details</p>
+
+                        <p><span className="text-cyan-400">$</span> PUT /campgrounds/:id</p>
+                        <p className="text-slate-400">→ Update (author only)</p>
+
+                        <p><span className="text-cyan-400">$</span> DELETE /campgrounds/:id</p>
+                        <p className="text-slate-400">→ Delete (protected)</p>
+
+                    </div>
+                </div>
 
             </motion.div>
 

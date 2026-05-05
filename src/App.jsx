@@ -4,7 +4,8 @@ import Home from "./pages/Home";
 import { useState, useEffect } from "react";
 import translations from './data/translations'
 import Projects from './pages/Projects'
-
+import Experience from "./pages/Experience";
+import ScrollToTop from "./utils/ScrollToTop";
 
 
 export default function App() {
@@ -32,13 +33,21 @@ export default function App() {
 
 
     return (
-        <div className="min-h-screen bg-white text-black dark:bg-slate-950 dark:text-white transition-colors duration-300">            <Navbar theme={theme} t={t} setLang={setLang} setTheme={setTheme} />
+        <><ScrollToTop />
+            <div className="
+min-h-screen 
+bg-gradient-to-br from-slate-50 via-white to-slate-100
+text-slate-800
+dark:from-slate-950 dark:via-slate-900 dark:to-slate-950
+dark:text-white
+transition-colors duration-500
+">            <Navbar t={t} theme={theme} setLang={setLang} setTheme={setTheme} />
+                <Routes>
+                    <Route path="/" element={<Home t={t} />} />
+                    <Route path="/projects" element={<Projects t={t} />} />
+                    <Route path="/experience" element={<Experience t={t} />} />
+                </Routes>
+            </div></>
 
-            <Routes>
-                <Route path="/" element={<Home t={t} />} />
-                <Route path="/projects" element={<Projects t={t} />} />
-                {/* <Route path="/experience" element={<Experience />} /> */}
-            </Routes>
-        </div>
     );
 }

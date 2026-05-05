@@ -10,7 +10,7 @@ const translations = {
 
         // Hero
         title: "Neil Banerjee",
-        role: "Node.js Backend Engineer",
+        role: "Software Engineer",
         tag: "Modern Backends & Scalable APIs",
         btn1: "View Projects",
         btn2: "Download Resume",
@@ -22,6 +22,7 @@ const translations = {
         impact3: "Delivered 20+ backend features in one month",
 
         // Projects
+        projectHeading: "Real-world backend applications showcasing REST APIs, secure authentication, and scalable system design.",
         projectTitle: "Projects",
 
         project1Title: "YelpCamp - Full Stack Platform",
@@ -46,8 +47,26 @@ const translations = {
         // Experience
         expTitle: "Experience",
         company: "Zimyo HRMS",
-        expDesc:
+        exp1Desc:
             "Building and maintaining REST APIs using Node.js, Express, and MongoDB",
+        exp2Desc:
+            "Worked on backend API testing, validation, and bug identification to ensure system reliability and data accuracy",
+        exp1Points: [
+            "Designed and maintained scalable REST APIs using Node.js & Express",
+            "Implemented authentication and authorization using middleware",
+            "Optimized backend performance and reduced production bugs",
+            "Worked with MongoDB for efficient data modeling and queries",
+            "Collaborated with frontend and product teams to deliver features",
+            "Delivered 20+ backend features within tight deadlines"
+        ],
+        exp2Points: [
+            "Wrote and executed unit and integration test cases for backend APIs",
+            "Identified and reported bugs, improving overall system reliability",
+            "Worked with testing tools to validate API responses and edge cases",
+            "Collaborated with developers to debug and resolve issues efficiently",
+            "Performed manual testing for new features before deployment",
+            "Ensured data consistency and correctness across different modules"
+        ],
 
         // Skills
         skillsTitle: "Backend Skills",
@@ -72,7 +91,7 @@ const translations = {
 
         // Hero
         title: "Neil Banerjee",
-        role: "Node.js Backend Entwickler",
+        role: "Software Entwickler",
         tag: "Moderne Backends & skalierbare APIs",
         btn1: "Projekte ansehen",
         btn2: "Lebenslauf herunterladen",
@@ -84,6 +103,7 @@ const translations = {
         impact3: "Über 20 Backend-Features in einem Monat geliefert",
 
         // Projects
+        projectHeading: "Praxisnahe Backend-Anwendungen mit Fokus auf REST APIs, sichere Authentifizierung und skalierbare Systemarchitektur.",
         projectTitle: "Projekte",
 
         project1Title: "YelpCamp - Full-Stack Plattform",
@@ -108,9 +128,26 @@ const translations = {
         // Experience
         expTitle: "Erfahrung",
         company: "Zimyo HRMS",
-        expDesc:
+        exp1Desc:
             "Entwicklung und Wartung von REST APIs mit Node.js, Express und MongoDB",
-
+        exp2Desc:
+            "Arbeitete an Backend-API-Tests, Validierung und Fehlererkennung zur Sicherstellung von Systemstabilität und Datenkorrektheit",
+        exp1Points: [
+            "Skalierbare REST APIs mit Node.js & Express entwickelt und gewartet",
+            "Authentifizierung und Autorisierung mit Middleware implementiert",
+            "Backend-Performance optimiert und Produktionsfehler reduziert",
+            "MongoDB für effiziente Datenmodellierung und Abfragen verwendet",
+            "Mit Frontend- und Produktteams zusammengearbeitet",
+            "Über 20 Backend-Features unter Zeitdruck geliefert"
+        ],
+        exp2Points: [
+            "Unit- und Integrationstests für Backend-APIs geschrieben und ausgeführt",
+            "Fehler identifiziert und gemeldet, um die Systemstabilität zu verbessern",
+            "Testing-Tools zur Validierung von API-Antworten und Edge Cases verwendet",
+            "Mit Entwicklern zusammengearbeitet, um Probleme effizient zu beheben",
+            "Manuelle Tests für neue Features vor der Veröffentlichung durchgeführt",
+            "Datenkonsistenz und Korrektheit in verschiedenen Modulen sichergestellt"
+        ],
         // Skills
         skillsTitle: "Backend Fähigkeiten",
         skills:
