@@ -8,6 +8,19 @@ const translations = {
         qualifications: "Qualifications",
         contact: "Contact",
 
+        //Home Container Details
+        detailsProjectsTitle: "Projects",
+        detailsProjectsDesc:
+            "Explore real-world backend applications featuring REST APIs, authentication, and scalable system design.",
+
+        detailsExpTitle: "Experience",
+        detailsExpDesc:
+            "Professional journey building backend systems, APIs, and performance-focused features in production environments.",
+
+        detailsQualTitle: "Qualifications",
+        detailsQualDesc:
+            "Technical skills, tools, and educational background supporting modern backend development.",
+
         // Hero
         title: "Neil Banerjee",
         role: "Software Engineer",
@@ -68,6 +81,20 @@ const translations = {
             "Ensured data consistency and correctness across different modules"
         ],
 
+        certTitle: "Certifications",
+        certifications: [
+            {
+                name: "Full Stack Development",
+                issuer: "Udemy",
+                link: "https://drive.google.com/file/d/1bVUGFiNLtrOfXQOcxJOF-JRH70AIMII1/view?usp=sharing"
+            },
+            {
+                name: "Git and GitHub",
+                issuer: "Udemy",
+                link: "https://drive.google.com/file/d/1lZJFZS9pvNC1DVfixBuNfUgRu-Wn6-3I/view?usp=sharing"
+            },
+        ],
+
         // Skills
         skillsTitle: "Backend Skills",
         skills:
@@ -88,6 +115,21 @@ const translations = {
         exp: "Erfahrung",
         qualifications: "Qualifikationen",
         contact: "Kontakt",
+
+        //Home Container navigation
+        detailsProjectsTitle: "Projekte",
+        detailsProjectsDesc:
+            "Praxisnahe Backend-Anwendungen mit REST APIs, Authentifizierung und skalierbarer Systemarchitektur.",
+
+        detailsExpTitle: "Erfahrung",
+        detailsExpDesc:
+            "Beruflicher Werdegang im Aufbau von Backend-Systemen, APIs und leistungsoptimierten Features in produktiven Umgebungen.",
+
+        detailsQualTitle: "Qualifikationen",
+        detailsQualDesc:
+            "Technische Fähigkeiten, Tools und Ausbildung für moderne Backend-Entwicklung.",
+
+
 
         // Hero
         title: "Neil Banerjee",
@@ -152,6 +194,22 @@ const translations = {
         skillsTitle: "Backend Fähigkeiten",
         skills:
             "Node.js, Express.js, MongoDB, REST APIs, Authentifizierung, MVC, Middleware",
+
+        // Certifications
+
+        certTitle: "Zertifikate",
+        certifications: [
+            {
+                name: "Full Stack Entwicklung",
+                issuer: "Udemy",
+                link: "https://drive.google.com/file/d/1bVUGFiNLtrOfXQOcxJOF-JRH70AIMII1/view?usp=sharing"
+            },
+            {
+                name: "Git und GitHub",
+                issuer: "Udemy",
+                link: "https://drive.google.com/file/d/1lZJFZS9pvNC1DVfixBuNfUgRu-Wn6-3I/view?usp=sharing"
+            }
+        ],
 
         // Contact
         contactTitle: "Kontakt",

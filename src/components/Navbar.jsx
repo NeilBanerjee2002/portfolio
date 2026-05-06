@@ -1,6 +1,10 @@
 export default function Navbar({ theme, t, setLang, setTheme }) {
     return (
-        <nav className='sticky top-0 z-50 backdrop-blur-xl bg-white/5 border-b border-white/10 px-8 py-4 flex items-center justify-between'>
+        <nav className='sticky top-0 z-50 backdrop-blur-xl
+bg-white/70 backdrop-blur-md 
+border-b border-gray-200 shadow-sm
+dark:bg-white/5 dark:border-white/10
+px-8 py-4 flex items-center justify-between'>
             <div className='font-bold text-xl'>{t.title}</div>
             <div className='hidden md:flex gap-6 text-slate-300'><a href='/'>{t.home}</a><a href='/projects'>{t.projects}</a><a href='/experience'>{t.exp}</a><a href='/qualifications'>Qualifications</a><a href='/contact'>{t.contact}</a></div>
             <button

@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import translations from './data/translations'
 import Projects from './pages/Projects'
 import Experience from "./pages/Experience";
+import Qualifications from './pages/Qualifications'
 import ScrollToTop from "./utils/ScrollToTop";
 
 
@@ -35,19 +36,23 @@ export default function App() {
     return (
         <><ScrollToTop />
             <div className="
-min-h-screen 
+min-h-screen relative
 bg-gradient-to-br from-slate-50 via-white to-slate-100
-text-slate-800
 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950
-dark:text-white
-transition-colors duration-500
-">            <Navbar t={t} theme={theme} setLang={setLang} setTheme={setTheme} />
+text-slate-800 dark:text-white
+transition-colors duration-300
+">
+
+                <div className="absolute inset-0 -z-10 blur-3xl opacity-20 
+  bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400"></div>
+                <Navbar t={t} theme={theme} setLang={setLang} setTheme={setTheme} />
                 <Routes>
                     <Route path="/" element={<Home t={t} />} />
                     <Route path="/projects" element={<Projects t={t} />} />
                     <Route path="/experience" element={<Experience t={t} />} />
+                    <Route path="/Qualifications" element={<Qualifications t={t} />} />
                 </Routes>
-            </div></>
+            </div ></>
 
     );
 }

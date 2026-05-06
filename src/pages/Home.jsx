@@ -6,7 +6,7 @@ export default function Home({ t }) {
     return (
         <>
             <Hero t={t} />
-            <Details_Home />
+            <Details_Home t={t} />
             <Bottom_Container />
         </>
     );

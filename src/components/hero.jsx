@@ -51,10 +51,10 @@ export default function Hero({ t }) {
             >
 
                 <div className="
-    rounded-2xl overflow-hidden
-    bg-slate-900 text-green-400
-    border border-slate-700
-    font-mono text-sm
+  rounded-2xl overflow-hidden
+  bg-white border border-gray-200 text-slate-800
+  dark:bg-slate-900 dark:border-slate-700 dark:text-green-400
+  font-mono text-sm
   ">
 
                     {/* Terminal Header */}

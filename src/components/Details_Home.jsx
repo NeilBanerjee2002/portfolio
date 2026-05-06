@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Details_Home() {
+export default function Details_Home({ t }) {
     return (
         <section className="px-8 md:px-16 pb-20 grid md:grid-cols-3 gap-6">
 
@@ -13,11 +13,10 @@ export default function Details_Home() {
         dark:bg-white/5 dark:border-white/10"
             >
                 <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-white">
-                    Projects
+                    {t.detailsProjectsTitle}
                 </h3>
                 <p className="text-gray-600 dark:text-slate-300">
-                    Explore real-world backend applications featuring REST APIs,
-                    authentication, and scalable system design.
+                    {t.detailsProjectsDesc}
                 </p>
             </Link>
 
@@ -30,11 +29,10 @@ export default function Details_Home() {
         dark:bg-white/5 dark:border-white/10"
             >
                 <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-white">
-                    Experience
+                    {t.detailsExpTitle}
                 </h3>
                 <p className="text-gray-600 dark:text-slate-300">
-                    Professional journey building backend systems, APIs, and
-                    performance-focused features in production environments.
+                    {t.detailsExpDesc}
                 </p>
             </Link>
 
@@ -47,11 +45,10 @@ export default function Details_Home() {
         dark:bg-white/5 dark:border-white/10"
             >
                 <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-white">
-                    Qualifications
+                    {t.detailsQualTitle}
                 </h3>
                 <p className="text-gray-600 dark:text-slate-300">
-                    Technical skills, tools, and educational background supporting
-                    modern backend development.
+                    {t.detailsQualDesc}
                 </p>
             </Link>
 
