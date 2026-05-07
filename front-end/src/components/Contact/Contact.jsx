@@ -1,5 +1,4 @@
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 import SectionToast from './SuccessToast'
 import ContactCard from './ContactCard'
 import { contactItems } from './ContactData'
@@ -22,40 +21,49 @@ export default function ContactMain({ t }) {
         });
     };
     const handleSubmit = async (e) => {
+
         e.preventDefault();
 
         setLoading(true);
 
         try {
-            await emailjs.send(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+
+            const response = await fetch(
+                "http://localhost:8000/api/contact",
                 {
-                    from_name: formData.name,
-                    from_email: formData.email,
-                    message: formData.message
-                },
-                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                }
             );
 
-            setSuccess(true);
-            setTimeout(() => {
-                setSuccess(false);
-            }, 3000);
+            const data = await response.json();
 
-            setFormData({
-                name: "",
-                email: "",
-                message: ""
-            });
+            if (data.success) {
 
-        } catch (err) {
-            console.log(err);
+                setSuccess(true);
+
+                setTimeout(() => {
+                    setSuccess(false);
+                }, 3000);
+
+                setFormData({
+                    name: "",
+                    email: "",
+                    message: ""
+                });
+            }
+
+        } catch (error) {
+
+            console.log(error);
+
             alert("Failed to send message");
         }
 
         setLoading(false);
-
     };
     return (
         <><SectionToast success={success} />
