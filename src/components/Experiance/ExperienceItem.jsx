@@ -1,8 +1,11 @@
-export default function ExperianceItem({ company,
+export default function ExperianceItem({
+    company,
     role,
     duration,
+    location,
     desc,
-    points }) {
+    points
+}) {
     return (
         <div className="relative">
 
@@ -10,22 +13,36 @@ export default function ExperianceItem({ company,
             <div className="absolute -left-[10px] top-2 w-4 h-4 rounded-full bg-cyan-500"></div>
 
             {/* Content */}
-            <div className="bg-gray-100 dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-2xl p-6">
+            <div className="
+    bg-white dark:bg-white/5
+    border border-gray-200 dark:border-white/10
+    rounded-2xl p-6
+    shadow-md shadow-gray-200/60
+    dark:shadow-cyan-500/5
+    hover:shadow-xl hover:-translate-y-0.5
+    transition
+">
+                {/* Top Row */}
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-2 gap-2">
 
-                {/* Company + Role */}
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                    <h2 className="text-2xl font-semibold">
-                        {role}
-                    </h2>
-                    <span className="text-sm text-gray-500 dark:text-slate-400">
-                        {duration}
-                    </span>
+                    {/* Left */}
+                    <div>
+                        <h2 className="text-2xl font-semibold">
+                            {role}
+                        </h2>
+
+                        <p className="text-cyan-500 font-medium">
+                            {company}
+                        </p>
+                    </div>
+
+                    {/* Right */}
+                    <div className="text-sm text-gray-500 dark:text-slate-400 text-left md:text-right">
+                        <p>{duration}</p>
+                        <p>{location}</p>
+                    </div>
+
                 </div>
-
-                {/* Role */}
-                <p className="text-cyan-500 font-medium mb-3">
-                    {company}
-                </p>
 
                 {/* Description */}
                 <p className="text-gray-600 dark:text-slate-400 mb-4">

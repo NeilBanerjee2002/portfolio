@@ -13,6 +13,7 @@ export default function ExperienceMain({ t }) {
             <div className="relative border-l border-gray-300 dark:border-white/10 pl-6 space-y-12">
 
                 <ExperianceItem
+                    location="Gurugram"
                     company={t.company}
                     role={t.role}
                     duration="May 2024 – Present"
@@ -21,6 +22,7 @@ export default function ExperienceMain({ t }) {
                 />
 
                 <ExperianceItem
+                    location="Gurugram"
                     company={t.company}
                     role="Engineering Intern"
                     duration="Jan 2024 – May 2024"

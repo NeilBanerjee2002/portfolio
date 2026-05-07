@@ -86,7 +86,7 @@ const translations = {
             {
                 name: "Full Stack Development",
                 issuer: "Udemy",
-                link: "https://drive.google.com/file/d/1bVUGFiNLtrOfXQOcxJOF-JRH70AIMII1/view?usp=sharing"
+                link: "https://drive.google.com/file/d/1PnWmD7t2bSe23P2YhAULJsJT5O3kn11x/view?usp=sharing"
             },
             {
                 name: "Git and GitHub",
@@ -202,7 +202,7 @@ const translations = {
             {
                 name: "Full Stack Entwicklung",
                 issuer: "Udemy",
-                link: "https://drive.google.com/file/d/1bVUGFiNLtrOfXQOcxJOF-JRH70AIMII1/view?usp=sharing"
+                link: "https://drive.google.com/file/d/1PnWmD7t2bSe23P2YhAULJsJT5O3kn11x/view?usp=sharing"
             },
             {
                 name: "Git und GitHub",

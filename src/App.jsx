@@ -7,6 +7,7 @@ import Projects from './pages/Projects'
 import Experience from "./pages/Experience";
 import Qualifications from './pages/Qualifications'
 import ScrollToTop from "./utils/ScrollToTop";
+import Contact from './pages/Contact'
 
 
 export default function App() {
@@ -51,6 +52,7 @@ transition-colors duration-300
                     <Route path="/projects" element={<Projects t={t} />} />
                     <Route path="/experience" element={<Experience t={t} />} />
                     <Route path="/Qualifications" element={<Qualifications t={t} />} />
+                    <Route path="/Contact" element={<Contact t={t} />} />
                 </Routes>
             </div ></>
 

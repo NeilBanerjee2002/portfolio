@@ -54,14 +54,14 @@ export default function Qualifications({ t }) {
           dark:bg-white/5 dark:border-white/10
         ">
                     <h2 className="text-2xl font-semibold mb-4 text-slate-800 dark:text-white">
-                        {t.educationTitle}
+                        Vellore Institute of Technology
                     </h2>
 
                     <div className="space-y-4 text-gray-700 dark:text-slate-300">
                         <p>
                             🎓 <strong>Bachelor’s Degree</strong>
                             <br />
-                            Computer Science / Related Field
+                            Electronics and Communication Engineering
                         </p>
 
                         <p>
@@ -130,6 +130,6 @@ export default function Qualifications({ t }) {
                 url={activePdf}
                 onClose={() => setActivePdf(null)}
             />
-        </section>
+        </section >
     );
 }
