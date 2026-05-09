@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SectionToast from './SuccessToast'
+import Toast from "./SuccessToast";
 import ContactCard from './ContactCard'
 import { contactItems } from './ContactData'
 import ContactForm from './ContactForm'
@@ -11,8 +11,12 @@ export default function ContactMain({ t }) {
         message: ""
     });
 
-    const [success, setSuccess] = useState(false);
-    const [loading, setLoading] = useState(false);
+    const [toast, setToast] = useState({
+        show: false,
+        type: "success",
+        title: "",
+        message: ""
+    }); const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
         setFormData({
@@ -41,12 +45,24 @@ export default function ContactMain({ t }) {
 
             const data = await response.json();
 
+            if (!response.ok) {
+                throw new Error(data.message);
+            }
+
             if (data.success) {
 
-                setSuccess(true);
+                setToast({
+                    show: true,
+                    type: "success",
+                    title: "Message Sent",
+                    message: data.message
+                });
 
                 setTimeout(() => {
-                    setSuccess(false);
+                    setToast(prev => ({
+                        ...prev,
+                        show: false
+                    }));
                 }, 3000);
 
                 setFormData({
@@ -60,13 +76,29 @@ export default function ContactMain({ t }) {
 
             console.log(error);
 
-            alert("Failed to send message");
+            setToast({
+                show: true,
+                type: "error",
+                title: "",
+                message: error.message
+            });
+            setTimeout(() => {
+                setToast(prev => ({
+                    ...prev,
+                    show: false
+                }));
+            }, 3000);
         }
 
         setLoading(false);
     };
     return (
-        <><SectionToast success={success} />
+        <><Toast
+            show={toast.show}
+            type={toast.type}
+            title={toast.title}
+            message={toast.message}
+        />
             <section className="px-8 md:px-16 py-24">
 
 
@@ -77,8 +109,7 @@ export default function ContactMain({ t }) {
                     </h1>
 
                     <p className="text-gray-600 dark:text-slate-400 text-lg">
-                        Open to backend engineering opportunities, freelance work,
-                        and collaboration on scalable web applications.
+                        Passionate about building scalable web applications and always open to exploring new engineering challenges and collaborative opportunities.
                     </p>
                 </div>
 

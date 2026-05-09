@@ -23,34 +23,58 @@ export default function ContactForm({
                 {/* Name */}
                 <input
                     type="text"
+                    required
                     name="name"
                     placeholder="Your Name"
                     value={formData.name}
                     onChange={handleChange}
                     className="
-                        w-full p-3 rounded-xl
-                        bg-white dark:bg-slate-900/50
-                        border border-gray-300 dark:border-white/10
-                        text-slate-800 dark:text-white
-                        outline-none focus:border-cyan-500
-                        transition
-                    "
+                                w-full p-3 rounded-xl
+                                bg-white dark:bg-slate-900/50
+                                text-slate-800 dark:text-white
+
+                                border border-gray-300
+                                dark:border-white/10
+
+                                outline-none transition
+
+                                focus:border-cyan-500
+                                focus:ring-2 focus:ring-cyan-500/20
+
+                                invalid:border-red-500
+                                invalid:text-red-500
+
+                                placeholder:text-gray-400
+                                dark:placeholder:text-slate-500
+                            "
                 />
 
                 {/* Email */}
                 <input
                     type="email"
+                    required
                     name="email"
                     placeholder="Your Email"
                     value={formData.email}
                     onChange={handleChange}
                     className="
-                        w-full p-3 rounded-xl
-                        bg-white dark:bg-slate-900/50
-                        border border-gray-300 dark:border-white/10
-                        text-slate-800 dark:text-white
-                        outline-none focus:border-cyan-500
-                        transition
+                            w-full p-3 rounded-xl
+                            bg-white dark:bg-slate-900/50
+                            text-slate-800 dark:text-white
+
+                            border border-gray-300
+                            dark:border-white/10
+
+                            outline-none transition
+
+                            focus:border-cyan-500
+                            focus:ring-2 focus:ring-cyan-500/20
+
+                            invalid:border-red-500
+                            invalid:text-red-500
+
+                            placeholder:text-gray-400
+                            dark:placeholder:text-slate-500
                     "
                 />
 
@@ -58,6 +82,7 @@ export default function ContactForm({
                 <textarea
                     rows="5"
                     name="message"
+                    required
                     placeholder="Your Message"
                     value={formData.message}
                     onChange={handleChange}
@@ -67,7 +92,8 @@ export default function ContactForm({
                         border border-gray-300 dark:border-white/10
                         text-slate-800 dark:text-white
                         outline-none focus:border-cyan-500
-                        transition resize-none
+                        transition resize-none invalid:border-red-500
+
                     "
                 />
 
