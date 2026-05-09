@@ -4,6 +4,8 @@ import ContactCard from './ContactCard'
 import { contactItems } from './ContactData'
 import ContactForm from './ContactForm'
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export default function ContactMain({ t }) {
     const [formData, setFormData] = useState({
         name: "",
@@ -33,7 +35,7 @@ export default function ContactMain({ t }) {
         try {
 
             const response = await fetch(
-                "http://localhost:8000/api/contact",
+                `${API_URL}/api/contact`,
                 {
                     method: "POST",
                     headers: {
