@@ -1,9 +1,36 @@
+import { useState } from "react";
+
 export default function ContactForm({
     formData,
     handleChange,
     handleSubmit,
     loading
 }) {
+
+    const [validated, setValidated] = useState(false);
+
+    const isValidEmail = (email) => {
+        return /\S+@\S+\.\S+/.test(email);
+    };
+
+    const onSubmit = (e) => {
+
+        e.preventDefault();
+
+        setValidated(true);
+
+        const valid =
+            formData.name.trim() &&
+            isValidEmail(formData.email) &&
+            formData.message.trim();
+
+        if (!valid) return;
+
+        handleSubmit(e);
+
+        setValidated(false);
+    };
+
     return (
         <div
             className="
@@ -18,88 +45,111 @@ export default function ContactForm({
                 Send a Message
             </h2>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form className="space-y-4">
 
                 {/* Name */}
-                <input
-                    type="text"
-                    required
-                    name="name"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="
-                                w-full p-3 rounded-xl
-                                bg-white dark:bg-slate-900/50
-                                text-slate-800 dark:text-white
-
-                                border border-gray-300
-                                dark:border-white/10
-
-                                outline-none transition
-
-                                focus:border-cyan-500
-                                focus:ring-2 focus:ring-cyan-500/20
-
-                                invalid:border-red-500
-                                invalid:text-red-500
-
-                                placeholder:text-gray-400
-                                dark:placeholder:text-slate-500
-                            "
-                />
-
-                {/* Email */}
-                <input
-                    type="email"
-                    required
-                    name="email"
-                    placeholder="Your Email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="
+                <div>
+                    <input
+                        type="text"
+                        required
+                        name="name"
+                        placeholder="Your Name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className={`
+                            form-control
                             w-full p-3 rounded-xl
                             bg-white dark:bg-slate-900/50
                             text-slate-800 dark:text-white
+                            outline-none transition-all
 
-                            border border-gray-300
-                            dark:border-white/10
+                            ${validated && !formData.name.trim()
+                                ? "border-red-500 ring-2 ring-red-500/20"
+                                : "border-gray-300 dark:border-white/10"
+                            }
 
-                            outline-none transition
-
-                            focus:border-cyan-500
                             focus:ring-2 focus:ring-cyan-500/20
+                            focus:border-cyan-500
+                        `}
+                    />
 
-                            invalid:border-red-500
-                            invalid:text-red-500
+                    {validated && !formData.name.trim() && (
+                        <div className="text-red-500 text-sm mt-1">
+                            Name is required
+                        </div>
+                    )}
+                </div>
 
-                            placeholder:text-gray-400
-                            dark:placeholder:text-slate-500
-                    "
-                />
+                {/* Email */}
+                <div>
+                    <input
+                        type="email"
+                        required
+                        name="email"
+                        placeholder="Your Email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className={`
+                            form-control
+                            w-full p-3 rounded-xl
+                            bg-white dark:bg-slate-900/50
+                            text-slate-800 dark:text-white
+                            outline-none transition-all
+
+                            ${validated && !isValidEmail(formData.email)
+                                ? "border-red-500 ring-2 ring-red-500/20"
+                                : "border-gray-300 dark:border-white/10"
+                            }
+
+                            focus:ring-2 focus:ring-cyan-500/20
+                            focus:border-cyan-500
+                        `}
+                    />
+
+                    {validated && !isValidEmail(formData.email) && (
+                        <div className="text-red-500 text-sm mt-1">
+                            Valid email is required
+                        </div>
+                    )}
+                </div>
 
                 {/* Message */}
-                <textarea
-                    rows="5"
-                    name="message"
-                    required
-                    placeholder="Your Message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="
-                        w-full p-3 rounded-xl
-                        bg-white dark:bg-slate-900/50
-                        border border-gray-300 dark:border-white/10
-                        text-slate-800 dark:text-white
-                        outline-none focus:border-cyan-500
-                        transition resize-none invalid:border-red-500
+                <div>
+                    <textarea
+                        rows="5"
+                        required
+                        name="message"
+                        placeholder="Your Message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        className={`
+                            form-control
+                            w-full p-3 rounded-xl
+                            bg-white dark:bg-slate-900/50
+                            text-slate-800 dark:text-white
+                            outline-none resize-none transition-all
 
-                    "
-                />
+                            ${validated && !formData.message.trim()
+                                ? "border-red-500 ring-2 ring-red-500/20"
+                                : "border-gray-300 dark:border-white/10"
+                            }
+
+                            focus:ring-2 focus:ring-cyan-500/20
+                            focus:border-cyan-500
+                        `}
+                    />
+
+                    {validated && !formData.message.trim() && (
+                        <div className="text-red-500 text-sm mt-1">
+                            Message is required
+                        </div>
+                    )}
+                </div>
 
                 {/* Button */}
                 <button
                     type="submit"
+                    onClick={onSubmit}
                     className="
                         px-6 py-3 rounded-xl
                         bg-cyan-600 hover:bg-cyan-500

@@ -24,11 +24,11 @@ export default function ProjectMain({ t }) {
                 />
 
                 {/* Project 2 */}
-                <ProjectItems
+                {/* <ProjectItems
                     projectTitle={t.project2Title}
                     projectDesc={t.project2Desc}
                     projectPoints={t.project2Points}
-                />
+                /> */}
 
             </div>
         </section>

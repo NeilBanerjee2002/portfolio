@@ -6,17 +6,39 @@ import rateLimit from "express-rate-limit";
 const router = express.Router();
 
 const contactLimiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 5, // limit each IP to 5 requests per window
-    message: {
-        success: false,
-        message: "Too many requests. Please try again later."
-    },
-    standardHeaders: true,
+    windowMs: 15 * 60 * 1000,
+    limit: 5,
+
+    standardHeaders: 'draft-7',
     legacyHeaders: false,
+
+    handler: (req, res) => {
+
+        return res.status(429).json({
+            success: false,
+            message: "Too many requests. Please try again later."
+        });
+    }
 });
 
-router.post("/", contactLimiter, async (req, res) => {
+const mandatoryFieldsCheck = (req, res, next) => {
+
+    const { name, message, email } = req.body || {};
+
+    if (
+        !name?.trim() ||
+        !message?.trim() ||
+        !email?.trim()
+    ) {
+        return res.status(400).json({
+            success: false,
+            message: "Missing mandatory fields: name/email/message"
+        });
+    }
+
+    next();
+};
+router.post("/", contactLimiter, mandatoryFieldsCheck, async (req, res) => {
 
     const { name, email, message } = req.body;
 
