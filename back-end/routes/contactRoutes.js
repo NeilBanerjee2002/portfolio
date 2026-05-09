@@ -53,7 +53,8 @@ router.post("/", contactLimiter, mandatoryFieldsCheck, async (req, res) => {
         });
 
         await transporter.sendMail({
-            from: email,
+            from: process.env.EMAIL_USER,
+            replyTo: email,
             to: process.env.EMAIL_USER,
             subject: `Portfolio Contact from ${name}`,
             html: `
