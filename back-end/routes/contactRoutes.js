@@ -53,9 +53,22 @@ router.post("/", contactLimiter, mandatoryFieldsCheck, async (req, res) => {
                 pass: process.env.EMAIL_PASS
             },
 
-            connectionTimeout: 10000,
-            family: 4
+            requireTLS: true,
+
+            tls: {
+                family: 4,
+                rejectUnauthorized: false
+            },
+
+            connectionTimeout: 20000,
+            greetingTimeout: 20000,
+            socketTimeout: 30000,
+
+            dnsTimeout: 20000
         });
+
+        await transporter.verify();
+        console.log("SMTP READY");
 
         await transporter.sendMail({
             from: process.env.EMAIL_USER,
