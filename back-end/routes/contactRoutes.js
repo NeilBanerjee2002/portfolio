@@ -51,20 +51,7 @@ router.post("/", contactLimiter, mandatoryFieldsCheck, async (req, res) => {
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS
-            },
-
-            requireTLS: true,
-
-            tls: {
-                family: 4,
-                rejectUnauthorized: false
-            },
-
-            connectionTimeout: 20000,
-            greetingTimeout: 20000,
-            socketTimeout: 30000,
-
-            dnsTimeout: 20000
+            }
         });
 
         await transporter.verify();
