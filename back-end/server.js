@@ -1,13 +1,15 @@
 import dns from "dns";
-
 dns.setDefaultResultOrder("ipv4first");
+
+import dotenv from "dotenv";
+dotenv.config();
+console.log("RESEND:", process.env.RESEND_API_KEY);
+
+
 import express from "express";
 import cors from "cors";
-import dotenv from "dotenv";
 
 import contactRoutes from "./routes/contactRoutes.js";
-
-dotenv.config();
 
 const app = express();
 
