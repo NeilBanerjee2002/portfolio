@@ -77,11 +77,10 @@ router.post("/", contactLimiter, mandatoryFieldsCheck, async (req, res) => {
 
     } catch (error) {
 
-        console.log(error);
-
+        console.error("MAIL ERROR:", error);
         res.status(500).json({
             success: false,
-            message: "Failed to send email"
+            message: error.message
         });
     }
 });
