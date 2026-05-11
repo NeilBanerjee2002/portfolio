@@ -34,10 +34,18 @@ export default function Hero({ t }) {
                     </a>
 
                     <a
-                        href="/resume.pdf"
+                        href="https://drive.google.com/file/d/1k19Djc08L7TtlklJVjIHoaORFCAg7Qgg/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="px-6 py-3 rounded-xl border border-white/20 hover:bg-white/10 transition"
                     >
                         {t.btn2}
+                    </a>
+                    <a
+                        href="/contact"
+                        className="px-6 py-3 rounded-xl border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 transition md:hidden"
+                    >
+                        Contact Me
                     </a>
                 </div>
             </motion.div>

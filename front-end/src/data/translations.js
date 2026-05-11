@@ -23,7 +23,7 @@ const translations = {
 
         // Hero
         title: "Neil Banerjee",
-        role: "Software Engineer",
+        role: "Backend Engineer",
         tag: "Modern Backends & Scalable APIs",
         btn1: "View Projects",
         btn2: "Download Resume",
@@ -133,7 +133,7 @@ const translations = {
 
         // Hero
         title: "Neil Banerjee",
-        role: "Software Entwickler",
+        role: "Backend Entwickler",
         tag: "Moderne Backends & skalierbare APIs",
         btn1: "Projekte ansehen",
         btn2: "Lebenslauf herunterladen",
