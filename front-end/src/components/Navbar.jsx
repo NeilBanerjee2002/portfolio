@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Navbar({ theme, t, setLang, setTheme }) {
     return (
         <nav className='sticky top-0 z-50 backdrop-blur-xl
@@ -6,7 +8,12 @@ border-b border-gray-200 shadow-sm
 dark:bg-white/5 dark:border-white/10
 px-8 py-4 flex items-center justify-between'>
             <div className='font-bold text-xl'>{t.title}</div>
-            <div className='hidden md:flex gap-6 text-slate-300'><a href='/'>{t.home}</a><a href='/projects'>{t.projects}</a><a href='/experience'>{t.exp}</a><a href='/qualifications'>Qualifications</a><a href='/contact'>{t.contact}</a></div>
+            <div className='hidden md:flex gap-6 text-slate-300'>
+                <Link to="/">{t.home}</Link>
+                <Link to="/projects">{t.projects}</Link>
+                <Link to="/experience">{t.exp}</Link>
+                <Link to="/qualifications">{t.qualifications}</Link>
+                <Link to="/contact">{t.contact}</Link></div>
             {/* <button
                 onClick={() => setTheme(prev => prev === "dark" ? "light" : "dark")}
                 className="text-xl hover:scale-110 transition"

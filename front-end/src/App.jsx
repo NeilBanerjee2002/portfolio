@@ -36,8 +36,8 @@ export default function App() {
 
     return (
         <><ScrollToTop />
-            <div className="
-min-h-screen relative
+            <div className="  overflow-hidden
+h-fit relative
 bg-gradient-to-br from-slate-50 via-white to-slate-100
 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950
 text-slate-800 dark:text-white

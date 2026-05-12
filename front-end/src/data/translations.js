@@ -105,6 +105,17 @@ const translations = {
         email: "Email",
         github: "GitHub",
         linkedin: "LinkedIn",
+
+        //Recruiter Section - 
+        // Recruiter Section
+        recruiterLabel: "For Recruiters",
+        available: "Available in 30 days notice",
+        location: "Germany / Remote",
+        workType: "Full-time · Freelance",
+        startDate: "Start date: immediately / by arrangement",
+        languages: "Languages",
+        germanLevel: "Basic knowledge",
+        location: "Gurgaon / Remote"
     },
 
     de: {
@@ -216,6 +227,16 @@ const translations = {
         email: "E-Mail",
         github: "GitHub",
         linkedin: "LinkedIn",
+
+        // Recruiter Section
+        recruiterLabel: "Für Recruiter",
+        available: "Verfügbar innerhalb von 30 Tagen",
+        location: "Deutschland / Remote",
+        workType: "Vollzeit · Freelance",
+        startDate: "Startdatum: sofort / nach Vereinbarung",
+        languages: "Sprachen",
+        germanLevel: "Grundkenntnisse",
+        location: "Deutschland / Remote"
     },
 };
 
