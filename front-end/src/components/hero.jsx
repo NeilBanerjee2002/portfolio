@@ -34,7 +34,7 @@ export default function Hero({ t }) {
                     </a>
 
                     <a
-                        href="https://drive.google.com/file/d/1k19Djc08L7TtlklJVjIHoaORFCAg7Qgg/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1S91wCXkO4AYNmFObvpu60kRukjK0xbxm/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-6 py-3 rounded-xl border border-white/20 hover:bg-white/10 transition"

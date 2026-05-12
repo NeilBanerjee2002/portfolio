@@ -1,6 +1,6 @@
 export default function RecruiterSection({ t }) {
     return (
-        <section className="mx-8 md:mx-16 mb-0">
+        <section className="mx-8 md:mx-16 mb-20">
 
 
             {/* Row 1 — Availability */}
