@@ -7,7 +7,7 @@ bg-white/70 backdrop-blur-md
 border-b border-gray-200 shadow-sm
 dark:bg-white/5 dark:border-white/10
 px-8 py-4 flex items-center justify-between'>
-            <div className='font-bold text-xl'>{t.title}</div>
+            <div className='font-bold text-xl'><Link to="/">{t.title}</Link></div>
             <div className='hidden md:flex gap-6 text-slate-300'>
                 <Link to="/">{t.home}</Link>
                 <Link to="/projects">{t.projects}</Link>
